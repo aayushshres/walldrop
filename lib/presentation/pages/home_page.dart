@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:walldrop/core/theme/app_pallete.dart';
+import 'package:walldrop/presentation/widgets/categoriestile.dart';
 import 'package:walldrop/presentation/widgets/searchbox.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,15 +29,16 @@ class HomePage extends StatelessWidget {
           elevation: 0,
         ),
         body: const Padding(
-          padding: EdgeInsets.all(15.0),
-          child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
-                children: [
-                  SearchBox(),
-                  SizedBox(height: 20),
-                ],
-              )),
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const SearchBox(),
+              const SizedBox(height: 20),
+              const CategoriesTile(),
+              const SizedBox(height: 20),
+            ],
+          ),
         ));
   }
 }
