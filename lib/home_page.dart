@@ -19,6 +19,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+        elevation: 0,
       ),
       body: const Center(
         child: Text("Home Page"),
