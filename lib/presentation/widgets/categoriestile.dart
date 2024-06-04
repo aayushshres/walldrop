@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:walldrop/core/theme/app_pallete.dart';
 import 'package:walldrop/data/model/categories_model.dart';
 
@@ -46,7 +47,15 @@ class _CategoriesTileState extends State<CategoriesTile> {
                     ),
                   ),
                   child: Center(
-                    child: Text(categories[index].categoriesName),
+                    child: Text(
+                      categories[index].categoriesName,
+                      style: GoogleFonts.poppins(
+                          textStyle: const TextStyle(
+                        color: AppPallete.whiteColor,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      )),
+                    ),
                   ),
                 ),
               ),
